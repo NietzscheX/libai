@@ -1,51 +1,53 @@
-'''
-昨天看了两章<<Javascript高级程序设计>>
-之前对这个js脚本语言完全是0基础
-'''
+/*
+*昨天看了两章<<Javascript高级程序设计>>
+*之前对这个js脚本语言完全是0基础
+*/
 
-'''
-第一章就是历史介绍
-javascript出生于1995年，是已故Netscape Navigator的后代，因为与微软IE竞争，引发标准的制定ECMAScript
-现代浏览器都是与ECMAScript兼容为发展方向。
+/*
+* 第一章就是历史介绍
+* javascript出生于1995年，是已故Netscape Navigator的后代，因为与微软IE竞争，引发标准的制定ECMAScript
+* 现代浏览器都是与ECMAScript兼容为发展方向。
 
-DOM概念文档、对象、模型，其实也是一个API，只是说这个API是针对XML，但是扩展之后可用于HTML的API。
-DOM是由w3c制定的标准。
-DOM有3个版本 1/2/3.逐渐完善的过程，
-DOM1只是为了映射文档的结果
-DOM2添加了：视图views、事件events、样式style（css）、遍历和操作文档的接口。
-DOM3添加了：以统一的方式加载和保存文档的方法、验证文档的方法。
+* DOM概念文档、对象、模型，其实也是一个API，只是说这个API是针对XML，但是扩展之后可用于HTML的API。
+* DOM是由w3c制定的标准。
+* DOM有3个版本 1/2/3.逐渐完善的过程，
+* DOM1只是为了映射文档的结果
+* DOM2添加了：视图views、事件events、样式style（css）、遍历和操作文档的接口。
+* DOM3添加了：以统一的方式加载和保存文档的方法、验证文档的方法。
 
-当然不同的语言还有些其他的DOM标准。
-因为先有DOM，再有浏览器去支持，所以实际上支持DOM才是浏览器开发商的主要目标。
+* 当然不同的语言还有些其他的DOM标准。
+* 因为先有DOM，再有浏览器去支持，所以实际上支持DOM才是浏览器开发商的主要目标。
 
-还提到一个BOM，浏览器、对象、模型。不过这个东西还没有标准。
-'''
+* 还提到一个BOM，浏览器、对象、模型。不过这个东西还没有标准。
+*/
 
-'''
-第二章也是比较简单
-主要讲了如何在HTML中引入javascript
-两种方式：1个是直接嵌入 
+/*
+* 第二章也是比较简单
+* 主要讲了如何在HTML中引入javascript
+* 两种方式：1个是直接嵌入 
+*/
 <script type="text/javascript"> 
 	function sayScript(){
 		alert("hello");
 		}
 </script>
 
-另外一种就是<script type="text/javascript" src="externaljs.js">如果这里再写js会被忽略</script>
+//另外一种就是
+<script type="text/javascript" src="externaljs.js">如果这里再写js会被忽略</script>
 
-最后提到script的加载顺序，因为一般习惯把js放在head里面，这样有个弊端就是：浏览器在等待js加载完全之前是白板
-解决办法有2个，一个是把js移动到body里面的</body>标签之前
-另外一个就是给在head里面的<script defer="defer"> 加个这个属性，延迟加载。（这个在H5中好像不支持了）
+//最后提到script的加载顺序，因为一般习惯把js放在head里面，这样有个弊端就是：浏览器在等待js加载完全之前是白板
+//解决办法有2个，一个是把js移动到body里面的</body>标签之前
+//另外一个就是给在head里面的<script defer="defer"> 加个这个属性，延迟加载。（这个在H5中好像不支持了）
 
-最后提到只有一个页面不支持javascript的话，才会执行<noscript>
+//最后提到只有一个页面不支持javascript的话，才会执行<noscript>
 <noscript>
 	<p> 本页面需要开启javascript才能正常显示</p>
 </noscript>
 
-'''
 
 
-'''
+
+/*
 第三章算是正式进入js的世界
 首先介绍语法：
 	标识符（可含$符号）、注释、关键字、变量、
@@ -71,7 +73,7 @@ DOM3添加了：以统一的方式加载和保存文档的方法、验证文档�
 
 关系操作符的时候，一个数值与字符串比较会转化为数值。
 而加法操作符 +号 会把一个数值与一个字符串 转化为字符串。
-
+*/
 
 
 	
