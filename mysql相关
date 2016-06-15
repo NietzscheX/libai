@@ -1,0 +1,20 @@
+本机忘记了mysql的root密码，我记得之前的办法是在my.conf里面添加一个类似mysql skip-grant-tables的字段，实现免密码登录数据库后，再修改密码。
+
+刚在http://dev.mysql.com/doc/refman/5.5/en/resetting-permissions.html  发现一种新的更改root密码方式，简单而有效：
+
+1./etc/init.d/mysqld stop 关闭掉服务
+2.echo "SET PASSWORD FOR 'root'@'localhost' = PASSWORD('123456');" > /tmp/mysql-init
+3.mysqld_safe --init-file=/tmp/mysql-init
+4.rm -rf /tmp/mysql-init
+5./etc/init.d/mysqld start  开启服务即可
+
+
+创建用户+密码是：
+  CREATE USER 'libai'@'localhost' IDENTIFIED BY '123456';
+
+更改密码是：
+  SET PASSWORD FOR 'libai'@'localhost' = PASSWORD('123456');   //和上面忘记root密码后写入文本中的格式一样
+  
+  
+  
+  
