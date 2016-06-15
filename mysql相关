@@ -4,7 +4,7 @@
 
 1./etc/init.d/mysqld stop 关闭掉服务
 2.echo "SET PASSWORD FOR 'root'@'localhost' = PASSWORD('123456');" > /tmp/mysql-init
-3.mysqld_safe --init-file=/tmp/mysql-init
+3.mysqld_safe --init-file=/tmp/mysql-init &
 4.rm -rf /tmp/mysql-init
 5./etc/init.d/mysqld start  开启服务即可
 
