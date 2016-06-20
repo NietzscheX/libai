@@ -70,3 +70,10 @@ result = {ResultSet} [<a accesskey="I" href="../genindex.html" title="General In
 urlopen = {function} <function urlopen at 0x02D98DF8>
 
 
+后来不甘心还是继续搜索发现了这个答案
+将一个字符串，通过gbk的方式，去解码，想要获得Unicode字符串，结果出错了
+
+http://www.tuicool.com/articles/nEjiEv
+http://www.crifan.com/note_about_website_crawl_and_emulate_login/
+
+
