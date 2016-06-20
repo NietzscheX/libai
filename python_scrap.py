@@ -23,6 +23,28 @@ def check_url(url):
     result = obj.findAll("a")
     return result
 
+开始一直以为是中文的问题
+指导更换url为english网站发现依然如此
+
+# -*- coding:utf-8 -*-
+from bs4 import BeautifulSoup
+from urllib.request import urlopen
+from urllib.error import HTTPError
+
+def check_url(url):
+    html = urlopen(url)
+    obj = BeautifulSoup(html,'html.parser')
+    result = obj.findAll("a")
+    return result
+
+
+
+
+if __name__ == '__main__':
+    result=check_url("https://docs.python.org/3.0/whatsnew/3.0.html")
+    for r in result:
+        print(r)
+        
 
 
 
