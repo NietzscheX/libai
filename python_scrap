@@ -1,0 +1,32 @@
+用BeautifulSoup解析html页面的时候遇到一个问题
+
+UnicodeEncodeError: 'gbk' codec can't encode character '\xa0' in position 50: illegal multibyte sequence
+
+大致意思是说，原html编码为utf8（并非gbk，于是有些字符无法再gbk中正常显示），google半天也没找到直接的答案
+
+倒是看到一种说法是gb18030或者gb2312可以最大兼容unicode
+
+见链接http://stackoverflow.com/questions/3218014/unicodeencodeerror-gbk-codec-cant-encode-character-illegal-multibyte-sequen
+
+
+
+# -*- coding:utf-8 -*-
+from bs4 import BeautifulSoup
+from urllib.request import urlopen
+from urllib.error import HTTPError
+
+def check_url(url):
+    html = urlopen(url)    
+    content = html.read().decode("utf-8")
+    obj = BeautifulSoup(content,'html.parser')
+    # result = obj.findAll("link",{"rel":"icon"})
+    result = obj.findAll("a")
+    return result
+
+
+
+
+if __name__ == '__main__':
+    result=check_url("http://cq.122.gov.cn")
+    for r in result:
+        print(r)
