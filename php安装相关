@@ -30,5 +30,32 @@ http://museum.php.net/php7/
 http://community.webcorecloud.com/tutorials/compiling_php_5217_on_centos_6/
 
 
+简单编译了一下
+其实就是添加了./configure --prefix=/opt/php52  --enable-fpm --enable-fastcgi   很神奇 如果只写--enable-fpm 并不会创建php-fpm
+
+好吧计算上面这样make之后
+依然在启动php-fpm的时候报错
+[root@localhost sbin]# ./php-fpm start
+Starting php_fpm Error in argument 1, char 1: no argument for option -
+Usage: php-cgi [-q] [-h] [-s] [-v] [-i] [-f <file>]
+       php-cgi <file> [args...]
+  -a               Run interactively
+  -C               Do not chdir to the script's directory
+  -c <path>|<file> Look for php.ini file in this directory
+  -n               No php.ini file will be used
+  -d foo[=bar]     Define INI entry foo with value 'bar'
+  -e               Generate extended information for debugger/profiler
+  -f <file>        Parse <file>.  Implies `-q'
+  -h               This help
+  -i               PHP information
+  -l               Syntax check only (lint)
+  -m               Show compiled in modules
+  -q               Quiet-mode.  Suppress HTTP Header output.
+  -s               Display colour syntax highlighted source.
+  -v               Version number
+  -w               Display source with stripped comments and whitespace.
+  -z <file>        Load Zend extension <file>.
+................................... failed
+
 
 
