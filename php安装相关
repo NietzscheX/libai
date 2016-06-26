@@ -16,9 +16,16 @@ gpgcheck=1
 
 官方php历史版本的地址了：
 http://museum.php.net/php5/
+http://php-fpm.org/
+
+tar zvxf php-5.2.17.tar.gz
+gzip -cd php-5.2.17-fpm-0.5.14.diff.gz | patch -d php-5.2.17 -p1
 
 想必6和7分别应该是
 http://museum.php.net/php6/
 http://museum.php.net/php7/
-但是实际上并没有这个地址。。。。
+但是实际上并没有这个地址....
+
+
+
 
