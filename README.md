@@ -11,3 +11,5 @@ so here is my first git hub file created with branch
 
 话说这个字体怎么设置大一点？设置为4会不会ok？
 
+ubuntu下chrome浏览器关了但是进程还在，启动不了
+批量干掉他的办法是：ps -ef | grep "chromium-browser" | awk '{print $2}' | xargs kill -9
