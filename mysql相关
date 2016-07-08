@@ -16,5 +16,32 @@
   SET PASSWORD FOR 'libai'@'localhost' = PASSWORD('123456');   //和上面忘记root密码后写入文本中的格式一样
   
   
+  ===================================================
+  
+  刚收到报警网站异常
+  上去发现流量正常、发现php日志说xx文件打不开各种include错误，以为开发动了文件喊开发协助，同时发现重启php-fpm进程的一瞬间，网站首页是正常的。
+  任意点击或者再过一会就不行了，报500和502
+  
+  检查nginx的access日志，里面全是500
+  检查nginx的error日志，发现里面有提到写入access.log失败，因为木有空间。
+  
+  用df -h 查看发现 / 根目录已经100%了
+  
+  赶紧用cd / 然后 du -sh *  发现/var/log/mysql 占用近60G 里面大量bin-log
+  
+  果断删除其他目录的大文件 ，重启mysql
+  
+  然后登陆mysql里面，show master logs; 查看二进制文件，。。。经过查看 阿里的同步otter挂了。可能这是导致binlog堆积的原因
+  安全备份 mysql目录之后，登陆到mysql里面把bin-log删除掉。
+  purge master logs to 'mysql-bin.000680';
+  
+  
+
+  
+  
+  
+  
+  
+  
   
   
