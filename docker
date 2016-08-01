@@ -1,0 +1,22 @@
+首先说一下在centos6.5+上安装docker后运行失败的解决办法
+
+[root@oracle ~]# docker -d
+WARN[0000] You are running linux kernel version 2.6.32-431.11.7.el6.ucloud.x86_64, which might be unstable running docker. Please upgrade your kernel to 3.10.0. 
+INFO[0000] Listening for HTTP on unix (/var/run/docker.sock) 
+docker: relocation error: docker: symbol dm_task_get_info_with_deferred_remove, version Base not defined in file libdevmapper.so.1.02 with link time reference
+
+解决办法是安装这个即可
+[root@oracle ~]# yum install device-mapper-event-libs
+
+
+docker的本质是对在linux的LXC上进行的封装。
+
+LXC解决的问题其实是 namespace + cgroup
+
+namespace用于隔离资源隔离（比如说mount点、user、network、ipc、pid、UTS）
+
+cgroup其实就是资源控制，可以简单理解为防止一个进程把计算机所有资源用完了。
+
+所以容器 == LXC + docker的引擎
+
+
