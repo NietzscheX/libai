@@ -13,3 +13,6 @@ so here is my first git hub file created with branch
 
 ubuntu下chrome浏览器关了但是进程还在，启动不了
 批量干掉他的办法是：ps -ef | grep "chromium-browser" | awk '{print $2}' | xargs kill -9
+
+
+the better tool to install deb(rpm) on ubuntu is ------> gdebi (which can auto solve the independence)
