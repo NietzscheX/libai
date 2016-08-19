@@ -43,6 +43,7 @@ file locks                      (-x) unlimited
 可以在docker 守护程序里面增加一个配置,比如
 在/etc/init.d/docker 里面添加行 ulimit -n 65535  即可.
 然后重启docker,进入容器里面使用ulimit -aH查看便知.
+
 [root@balance ~]# docker  exec -it percona /bin/bash
 [root@8f57536d1a3c /]# ulimit -aH
 core file size          (blocks, -c) unlimited
@@ -57,10 +58,8 @@ pipe size            (512 bytes, -p) 8
 POSIX message queues     (bytes, -q) 819200
 real-time priority              (-r) 0
 stack size              (kbytes, -s) unlimited
-cpu time               (seconds, -t) unlimited
-max user processes              (-u) 30484
-virtual memory          (kbytes, -v) unlimited
-file locks                      (-x) unlimited
+cpu time               (seconds, -t) unlimited 
+max user processes              (-u) 30484 
+virtual memory          (kbytes, -v) unlimited 
+file locks                      (-x) unlimited 
 [root@8f57536d1a3c /]# 
-
-
