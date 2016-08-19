@@ -16,3 +16,51 @@ ubuntu下chrome浏览器关了但是进程还在，启动不了
 
 
 the better tool to install deb(rpm) on ubuntu is ------> gdebi (which can auto solve the independence)
+
+docker 启动报各种文件描述符不足的时候,
+默认是这样的:
+[root@balance ~]# docker  exec -it percona /bin/bash
+[root@8f57536d1a3c /]# ulimit -aH
+core file size          (blocks, -c) unlimited
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 30484
+max locked memory       (kbytes, -l) 64
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 4096
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) unlimited
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 30484
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
+[root@8f57536d1a3c /]# 
+
+
+可以在docker 守护程序里面增加一个配置,比如
+在/etc/init.d/docker 里面添加行 ulimit -n 65535  即可.
+然后重启docker,进入容器里面使用ulimit -aH查看便知.
+[root@balance ~]# docker  exec -it percona /bin/bash
+[root@8f57536d1a3c /]# ulimit -aH
+core file size          (blocks, -c) unlimited
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 30484
+max locked memory       (kbytes, -l) 64
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 65535
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) unlimited
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 30484
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
+[root@8f57536d1a3c /]# 
+
+
