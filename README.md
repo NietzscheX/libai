@@ -67,3 +67,13 @@ max user processes              (-u) 30484
 virtual memory          (kbytes, -v) unlimited 
 file locks                      (-x) unlimited 
 ```
+
+# 刚发现计划任务没有执行...
+> 检查发现/var/log/cron里面也没有日志...
+> 于是先把/etc/init.d/rsyslog restart  日志记录启动起来
+> 然后把/etc/init.d/cron restart 启动起来
+> 再通过一个小脚本测试一下是否正常 
+``` bash
+    cd /opt/libai/;time=`date -d now`; echo $time >> 123.txt
+```
+
