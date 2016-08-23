@@ -77,3 +77,27 @@ file locks                      (-x) unlimited
     cd /opt/libai/;time=`date -d now`; echo $time >> 123.txt
 ```
 
+-  今天做了一共系统封装
+-  > 准备工作:原版操作系统cn_windows_7_ultimate_x64_dvd_x15-66043.iso
+-  > 万能驱动 WanDrv6_Win7.x64_6.6.2016.0719_Dev.zip
+-  > 运行库 GoRuntime_1.9 (包含.NET dx VC)
+-  系统装好了之后在输入用户名界面,按ctrl + shift +F3,系统重启
+-  首先进入winPE用到EasyImageX_v1.62用于将操作系统备份成WIM的镜像.
+-  然后进入系统,用EasySysprep_4.3.29.602制作第一阶段的封装
+-  重启进入WinPE,再次启动EasySysprep_4.3.29.602制作第二阶段的封装.
+-  最后在WinPE里面把通过EasyImageX_v1.62把二阶段制作的封装打包成 .wim 或者.gho
+-  
+-  只是我第一次制作,win的包有6G+,因为工作环境是ubuntu16.04 + virtalbox,
+-  Oracle VM VirtualBox Command Line Management Interface Version 5.0.20
+-  有BUG无法把宿主的U盘挂载到虚拟机里...
+-  所以存在一个问题:在linux上的win7x64.pro.wim无法直接以文件/以U盘/以ISO挂载到想安装的目标系统...
+-  虽然我尝试了 dd if=win7x64.pro.wim of=win7x64.pro.wim.iso 但是并不能识别这种格式
+-  后来尝试使用python -m SimpleHTTPServer 8000  然后在客户机通过浏览器下载...发现python直接崩溃
+-  再使用nginx来以autoindex提供下载,这次nginx没崩,但是客户机崩了.
+-  最终发现一个法宝----->windows和linux之间拷贝数据可以用pscp.exe
+-  通过 scp root@192.168.1.122:/data/imgs/win7x64.pro.wim.iso d:\   就ok啦~~~
+-  
+
+
+
+
