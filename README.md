@@ -98,6 +98,11 @@ file locks                      (-x) unlimited
 -  通过 scp root@192.168.1.122:/data/imgs/win7x64.pro.wim.iso d:\   就ok啦~~~
 -  
 
+>  ubuntu 下的记事本gedit本来使用比较方便,但是没有配置文件,只有通过全局开头的设置环境
+> 比如 gsettings set org.gnome.gedit.preferences.editor display-line-numbers true
+> 具体的可用参数 gsettings list-recursively  | grep -i gedit
+> 哈哈在http://askubuntu.com/questions/375049/where-are-gedits-preferences 学到一招,先打开gedit然后按ALT+E,
+> 再按E选择Pr[e]ferences 就可用配置gedit了!
 
 
 
