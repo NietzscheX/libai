@@ -104,5 +104,17 @@ file locks                      (-x) unlimited
 > 哈哈在http://askubuntu.com/questions/375049/where-are-gedits-preferences 学到一招,先打开gedit然后按ALT+E,
 > 再按E选择Pr[e]ferences 就可用配置gedit了!
 
+```
+  在linux下创建一个特定大小的文件用dd没错,正常是这样的
+  创建1个G: dd if=/dev/zero of=a.out bs=1M count=1024
+  创建10个G: dd if=/dev/zero of=a.out bs=1M count=10240
+  
+  
+  上面的创建很慢创建10G差不要几分钟,要提高速度秒级别有个技巧,用seek参数.
+  创建1个G: dd if=/dev/zero of=a.out bs=1M count=0 seek=1024
+  创建10个G:  dd if=/dev/zero of=a.out bs=1M count=0 seek=10240
+  
+```
+
 
 
