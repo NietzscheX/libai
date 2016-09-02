@@ -113,7 +113,10 @@ file locks                      (-x) unlimited
   上面的创建很慢创建10G差不要几分钟,要提高速度秒级别有个技巧,用seek参数.
   创建1个G: dd if=/dev/zero of=a.out bs=1M count=0 seek=1024
   创建10个G:  dd if=/dev/zero of=a.out bs=1M count=0 seek=10240
-  
+
+  还有批量创建文件夹的办法,比如说
+   mkdir -p {a..z}/{a..z}{1..26}
+   mkdir {libai,dufu,github,google}
 ```
 
 
