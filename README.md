@@ -117,6 +117,10 @@ file locks                      (-x) unlimited
   还有批量创建文件夹的办法,比如说
    mkdir -p {a..z}/{a..z}{1..26}
    mkdir {libai,dufu,github,google}
+   
+   因为网络原因经常pip下载不了模块,只有手动下载openpyxl-2.4.0-b1.tar.gz 然后执行pip install openpyxl-2.4.0-b1.tar.gz 就可以啦
+   
+   
 ```
 
 
