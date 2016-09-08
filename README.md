@@ -120,7 +120,58 @@ file locks                      (-x) unlimited
    
    因为网络原因经常pip下载不了模块,只有手动下载openpyxl-2.4.0-b1.tar.gz 然后执行pip install openpyxl-2.4.0-b1.tar.gz 就可以啦
    
-   
+   lua 和c 和python在对待循环上一个显著的区别是
+   libai@libai-desktop:/opt/script$ cat -n test.c && gcc test.c  && ./a.out
+     1	#include <stdio.h>
+     2	
+     3	int main()
+     4	{
+     5	 int i =0;
+     6	 for (i=0;i<10;i++)
+     7	  {
+     8	    i+=10;
+     9	    printf("result %d\n",i);
+    10	  }
+    11	}
+result 10
+
+libai@libai-desktop:/opt/script$ cat -n test.lua  && luajit test.lua 
+     1	for i=1,10,1
+     2	do
+     3	   i=i+10
+     4	   print("result ",i)
+     5	end
+result 	11
+result 	12
+result 	13
+result 	14
+result 	15
+result 	16
+result 	17
+result 	18
+result 	19
+result 	20
+
+libai@libai-desktop:/opt/script$ cat -n test.py  && python test.py
+     1	for i in range(10):
+     2	    i+=10
+     3	    print("result %d"% i)
+     4	
+result 10
+result 11
+result 12
+result 13
+result 14
+result 15
+result 16
+result 17
+result 18
+result 19
+
+
+
+
+
 ```
 
 
