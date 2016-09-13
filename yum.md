@@ -1,9 +1,9 @@
-以前都是每次装机然后copy一份epel的地址
-今天意外发现可以用 yum install epel-release   
++ 以前都是每次装机然后copy一份epel的地址
++ 今天意外发现可以用 yum install epel-release   
 
-不过 remi的还是要在这里下载http://rpms.famillecollet.com/
++ 不过 remi的还是要在这里下载http://rpms.famillecollet.com/
 
-
+``` shell 
 //如下在2016-06-21执行的时候是默认安装php5.4..实际上最新的php7.x都有
 通过
 yum search  php --enablerepo=remi  可以验证
@@ -85,3 +85,4 @@ Total download size: 3.8 M
 Installed size: 13 M
 Is this ok [y/N]: 
 
+```
