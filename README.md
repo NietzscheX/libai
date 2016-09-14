@@ -181,5 +181,28 @@ result 18
 result 19
 ```  
 
+``` shell
+# 有时候需要打印文件的全路径,要先pwd打印文件夹路径,再拼接文件名
+   [root@www3 ]# cat ~/.bashrc 
+# .bashrc
+
+# User specific aliases and functions
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias l='ls -lh'
+##打印文件全路径
+alias lsp='find `pwd` -name'
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+alias grep='grep --color=auto'
+
+# s使用方法比较简单...lsp xxx.html 即可
+```
+
 
 
