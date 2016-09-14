@@ -202,6 +202,8 @@ fi
 alias grep='grep --color=auto'
 
 # s使用方法比较简单...lsp xxx.html 即可
+
+但是还有一个系统自带的命令 readlink -f myfile_2016-01-11-02:00.dump 也可以打印出一样的结果
 ```
 
 
