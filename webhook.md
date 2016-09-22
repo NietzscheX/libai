@@ -48,7 +48,7 @@ WEB="/data/htdocs/www.xxxx.com"
 ```
 
 
-+ 顺便把gi相关的也贴在这里
++ 顺便把git相关的也贴在这里
 ``` shell
 # Determining branch
 if ! [ -t 0 ]; then
