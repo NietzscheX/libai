@@ -209,5 +209,12 @@ alias grep='grep --color=auto'
 
 ```
 
+``` 
+ 系统用了ubuntu1604 + virtualbox + win7
+ 发现win7里面无法发现USB设备
+ 原来是没有安装vbox的组件(http://download.virtualbox.org/virtualbox/5.1.6/Oracle_VM_VirtualBox_Extension_Pack-5.1.6-110634.vbox-extpack)
+ 虚拟机和宿主之间交互/全屏等需要安装VBoxGuestAdditions_5.1.6.iso http://download.virtualbox.org/virtualbox/5.1.6/VBoxGuestAdditions_5.1.6.iso
+ ```
+ 
 
 
