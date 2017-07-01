@@ -1,11 +1,40 @@
 http://vault.centos.org/6.5/centosplus/x86_64/Packages/
 
-2.6.32-431.11.25.el6.ucloud.x86_64  没解？
-
-
+在ucloud上centos默认安装的内核版本是这个
+2.6.32-431.11.25.el6.ucloud.x86_64 
+我需要安装systemtap，在官网上竟然找不到一样的内核包 比如
+erp上安装的，从这里下载的
 wget https://buildlogs.centos.org/c7-updates/kernel/3.10.0-123.4.4.el7/20140725050436/kernel-devel-3.10.0-123.4.4.el7.x86_64.rpm
+kernel-debuginfo-3.10.0-123.4.4.el7.x86_64.rpm  
+kernel-debuginfo-common-x86_64-3.10.0-123.4.4.el7.x86_64.rpm  
+kernel-devel-3.10.0-123.4.4.el7.x86_64.rpm
 
 
+
+
+
+
+尝试下载一个6.6的高级一点的版本来内核升级试试 :D
 wget http://vault.centos.org/6.6/centosplus/x86_64/Packages/kernel-2.6.32-504.el6.centos.plus.x86_64.rpm
+
+
+安装出现这个问题
+[root@10-19-111-68 data]# rpm -ivh kernel-2.6.32-504.el6.centos.plus.x86_64.rpm 
+Preparing...                ########################################### [100%]
+	package kernel-100:2.6.32-431.11.25.el6.ucloud.x86_64 (which is newer than kernel-2.6.32-504.el6.centos.plus.x86_64) is already installed
+
+
+好吧 再来一个 6.8版本的
+http://vault.centos.org/6.8/centosplus/x86_64/Packages/kernel-2.6.32-642.15.1.el6.centos.plus.x86_64.rpm
+
+[root@10-19-111-68 data]# rpm -ivh kernel-2.6.32-642.15.1.el6.centos.plus.x86_64.rpm 
+Preparing...                ########################################### [100%]
+	package kernel-100:2.6.32-431.11.25.el6.ucloud.x86_64 (which is newer than kernel-2.6.32-642.15.1.el6.centos.plus.x86_64) is already installed
+
+
+。。。
+结果重装一下ucloud后kernel竟然变了
+http://mirror.centos.org/centos/6/centosplus/x86_64/Packages/
+
 
 
