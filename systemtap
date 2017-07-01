@@ -1,3 +1,11 @@
 http://vault.centos.org/6.5/centosplus/x86_64/Packages/
 
 2.6.32-431.11.25.el6.ucloud.x86_64  没解？
+
+
+wget https://buildlogs.centos.org/c7-updates/kernel/3.10.0-123.4.4.el7/20140725050436/kernel-devel-3.10.0-123.4.4.el7.x86_64.rpm
+
+
+wget http://vault.centos.org/6.6/centosplus/x86_64/Packages/kernel-2.6.32-504.el6.centos.plus.x86_64.rpm
+
+
