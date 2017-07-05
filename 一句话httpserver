@@ -1,0 +1,18 @@
+for python
+
+python -m SimpleHTTPServer 5000
+
+
+
+for ruby 
+ruby -run -e httpd . -p 5000
+or
+ruby -r un -e httpd . -p 5000
+
+
+for php
+php -S 0.0.0.0:5001 -t .
+
+
+
+
