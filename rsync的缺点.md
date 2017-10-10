@@ -1,0 +1,2 @@
+* rsync 的一个大缺点是
+* A disadvantage with Rsync synchronization is that normally directory and file moves result in a deletion of the move origin and a retransfer of the move destination of the wire.
