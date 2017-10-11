@@ -55,3 +55,24 @@ CentOS-6：请在 6.N/os/arch/Packages/ 或 6.N/updates/arch/Packages/ 目录内
 
 参考来自https://wiki.centos.org/zh/HowTos/I_need_the_Kernel_Source
 
+
+举个例子
+内核版本：
+uname -r
+3.10.0-327.22.2.el7.x86_64
+
+需要如下3个包
+kernel-debuginfo-3.10.0-327.22.2.el7.x86_64.rpm
+kernel-debuginfo-common-x86_64-3.10.0-327.22.2.el7.x86_64.rpm
+kernel-devel-3.10.0-327.22.2.el7.x86_64.rpm
+
+
+前2个debuginfo包比较好找：
+http://debuginfo.centos.org/7/x86_64/kernel-debuginfo-3.10.0-327.22.2.el7.x86_64.rpm
+http://debuginfo.centos.org/7/x86_64/kernel-debuginfo-common-x86_64-3.10.0-327.22.2.el7.x86_64.rpm
+
+后面这个kernel-devel麻烦一点，在另外一个域名vault.centos.org
+在这里查到327的主版本http://vault.centos.org/7.2.1511/os/x86_64/Packages/kernel-devel-3.10.0-327.el7.x86_64.rpm
+但是没有22.2应该属于升级版
+需要在前一个update目录中找到了http://vault.centos.org/7.2.1511/updates/x86_64/Packages/kernel-devel-3.10.0-327.22.2.el7.x86_64.rpm
+
