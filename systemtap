@@ -42,6 +42,16 @@ http://mirror.centos.org/centos/6/centosplus/x86_64/Packages/
 http://debuginfo.centos.org/6/x86_64/
 http://debuginfo.centos.org/7/x86_64/
 
+==================================================================
+centos内核的所有入口在 http://vault.centos.org
+其中http://vault.centos.org/debuginfo/   已经迁移到 http://debuginfo.centos.org
+而http://debuginfo.centos.org里面分了6和7
+http://debuginfo.centos.org/6/x86_64
+http://debuginfo.centos.org/7/x86_64
+本来kenerl-devel-$(uname -r) 这个是需要通过yum update && reboot 后 yum install kernel-devel安装的
+但是也可以从这里下载http://vault.centos.org/
+CentOS-7：请在 7.N.YYMM/os/x86_64/Packages/ 或 7.N.YYMM/updates/x86_64/Packages/ 目录内找寻 kernel-devel-版本.x86_64.rpm
+CentOS-6：请在 6.N/os/arch/Packages/ 或 6.N/updates/arch/Packages/ 目录内找寻 kernel-devel-版本.结构.rpm
 
-
+参考来自https://wiki.centos.org/zh/HowTos/I_need_the_Kernel_Source
 
