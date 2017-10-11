@@ -76,3 +76,12 @@ http://debuginfo.centos.org/7/x86_64/kernel-debuginfo-common-x86_64-3.10.0-327.2
 但是没有22.2应该属于升级版
 需要在前一个update目录中找到了http://vault.centos.org/7.2.1511/updates/x86_64/Packages/kernel-devel-3.10.0-327.22.2.el7.x86_64.rpm
 
+但是也要注意，根据http://vault.centos.org/readme.txt的介绍
+vault.centos.org并不是实时更新，顶多算老版本的一个快照，并不推荐用这个，而是推荐使用
+https://www.centos.org/download/mirrors/
+
+比如这个centos6.9/内核版本为kernel-devel-2.6.32-696.10.2.el6.x86_64.rpm的在vault上就找不到，最终还是需要在这里下载：
+http://mirror.centos.org/
+主版本在http://mirror.centos.org/centos-6/6.9/os/x86_64/Packages/kernel-devel-2.6.32-696.el6.x86_64.rpm
+升级版本在http://mirror.centos.org/centos/6/updates/x86_64/Packages/kernel-devel-2.6.32-696.10.2.el6.x86_64.rpm
+
