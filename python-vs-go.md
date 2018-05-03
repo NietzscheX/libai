@@ -4,10 +4,10 @@
 - [x] lua
 - [x] python
 - [x] go
-- [] ruby
-- [] c
-- [] shell
-- [] java
+- [ ] ruby
+- [ ] c
+- [ ] shell
+- [ ] java
 
 libai@libai-desktop:/data/htdocs/learngo$ cat -n test.py 
 ``` python
