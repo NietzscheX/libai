@@ -5,8 +5,9 @@ libai@libai-desktop:/data/htdocs/learngo$ cat -n test.py
      3	  i+=1
      4	print (i)
 ```
-''' go
+
 libai@libai-desktop:/data/htdocs/learngo$ cat -n test.go
+``` go
      1	package main
      2	import(
      3	  "fmt"
@@ -21,15 +22,16 @@ libai@libai-desktop:/data/htdocs/learngo$ cat -n test.go
     12	
     13	    fmt.Println(i);
     14	}
-''' 
-'''lua
+``` 
 libai@libai-desktop:/data/htdocs/learngo$ cat -n test.lua 
+```lua
+
      1	local i = 0 
      2	while i <= 4228250625 do
      3	  i= i+1
      4	end
      5	print(i)
-'''
+```
 
     
 libai@libai-desktop:/data/htdocs/learngo$ time lua test.lua
