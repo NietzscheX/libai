@@ -1,3 +1,6 @@
+> 没想到go语言性能这么强大！，作为通用编程语言确实快，竟然lua都赶不上。
+不过可以看看jit如何。
+
 libai@libai-desktop:/data/htdocs/learngo$ cat -n test.py 
 ``` python
      1	i = 0
