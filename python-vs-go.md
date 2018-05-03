@@ -33,7 +33,7 @@ libai@libai-desktop:/data/htdocs/learngo$ cat -n test.lua
      5	print(i)
 ```
 
-    
+```bash
 libai@libai-desktop:/data/htdocs/learngo$ time lua test.lua
 4228250626
 
@@ -53,3 +53,4 @@ libai@libai-desktop:/data/htdocs/learngo$ time  go run test.go
 real	0m1.591s
 user	0m1.533s
 sys	0m0.055s
+```
